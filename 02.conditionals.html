@@ -1,0 +1,12 @@
+<script src="https://unpkg.com/vue"></script>
+<div id="app">
+	<p v-if='seen'>Now you see me</p>
+</div>
+<script type="text/javascript">
+	var app = new Vue({
+		el: '#app',
+		data: {
+			seen: true //change true or false
+		}
+	})
+</script>
