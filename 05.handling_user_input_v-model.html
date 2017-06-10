@@ -1,0 +1,16 @@
+<script src="https://unpkg.com/vue"></script>
+<div id="app">
+	<p>{{ message }}</p>
+	<input v-model='message'>
+</div>
+<script type="text/javascript">
+	var app = new Vue({
+		el: '#app',
+		data: {
+			message: 'Hello Vue!'
+		}
+	})
+</script>
+<!--
+	v-model: union bidireccional entre entrada de formularios y el estado de la aplicación
+-->
