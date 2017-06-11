@@ -1,0 +1,20 @@
+<script src="https://unpkg.com/vue"></script>
+<script type="text/javascript">
+	var data = { a: 1}
+	var vm = new Vue({
+		data: data
+	})
+	console.log('vm.a: ' + vm.a)
+	console.log('data.a: ' + data.a)
+	console.log('equals: ' + (vm.a === data.a))
+
+	vm.a = 2
+	console.log('vm.a: ' + vm.a)
+	console.log('data.a: ' + data.a)
+	console.log('equals: ' + (vm.a === data.a))
+
+	data.a = 3
+	console.log('vm.a: ' + vm.a)
+	console.log('data.a: ' + data.a)
+	console.log('equals: ' + (vm.a === data.a))
+</script>
