@@ -1,0 +1,22 @@
+<script src="https://unpkg.com/vue"></script>
+<div id="app">
+	<h1>Instance Lifecycle Hooks</h1>
+	<p>See console</p>
+	<div>
+		<a href="https://vuejs.org/v2/guide/instance.html#Instance-Lifecycle-Hooks">more info</a>
+	</div>
+	<img src="https://vuejs.org/images/lifecycle.png" width='500px'>
+
+</div>
+<script type="text/javascript">
+	var vm = new Vue({
+		el: '#app',
+		data: {
+			a: 1
+		},
+		created: function() {
+			// 'this' points to the vm instance
+			console.log('a is: ' + this.a)
+		}
+	})
+</script>
