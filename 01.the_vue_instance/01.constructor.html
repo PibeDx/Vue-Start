@@ -1,0 +1,25 @@
+<script src="https://unpkg.com/vue"></script>
+<div id="app">
+	<strong>{{ message }}</strong>
+</div>
+<script type="text/javascript">
+	/*var vm = new Vue({
+		//options
+	})*/
+
+	var MyComponent = Vue.extend({
+		//extension options
+		
+		data: function() {
+			return {
+				message : 'Hi, I use Vue.Extend'
+			}
+		}
+	})
+	// all instances of `MyComponent` are created with
+	// the pre-defined extension options
+	var mycomponentInstance = new MyComponent()
+	mycomponentInstance.$mount('#app')
+	
+
+</script>
