@@ -1,0 +1,45 @@
+<script src="https://unpkg.com/vue"></script>
+<div id="example">
+	<p>Vue methods</p>
+	<p>vm.$..</p>
+	<p>vm.$watch</p>
+	<strong>See console</strong>
+</div>
+<script type="text/javascript">
+	var data = { a: 1 }
+	var vm = new Vue({
+		el: '#example',
+		data: data
+	})
+
+	console.log('vm.$data :' + vm.$data)
+	console.log('data :' + data)
+	console.log('equals: ' + (vm.$data === data))
+
+	console.log('vm.$el: ' + vm.$el)
+	console.log('getElementById example: ' + document.getElementById('example'))
+	console.log('equals: ' + (vm.$el === document.getElementById('example')))
+
+	
+	vm.$watch('a', function(newVal, oldVal) {
+		// this callback will be called when `vm.a` changes
+		console.log('newVal: ' + newVal)
+		console.log('oldVal: ' + oldVal)
+	})
+
+	/*var self = this
+	var myMethod = function(newVal, oldVal) {
+		console.log('newVal: ' + newVal)
+		console.log('oldVal: ' + oldVal)
+	}
+
+	vm.$watch('a', (newVal, oldVal) => this.myMethod(newVal, oldVal))
+	*/
+	/*
+	vm.$watch('a', (newVal, oldVal) => {
+		console.log('newVal: ' + newVal)
+		console.log('oldVal: ' + oldVal)
+	})
+	*/
+	vm.a = 2
+</script>
