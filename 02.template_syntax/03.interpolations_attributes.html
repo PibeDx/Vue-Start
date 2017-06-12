@@ -1,0 +1,21 @@
+<script src="https://unpkg.com/vue"></script>
+<div id="app">
+	<div v-bind:id='dynamicId'>
+		div id is: {{ dynamicId }}
+	</div>
+	<button v-bind:disabled='someDynamicCondition' v-on:click='disabled'>Button</button>
+</div>
+<script type="text/javascript">
+	var vm = new Vue({
+		el: '#app',
+		data: {
+			dynamicId: 0,
+			someDynamicCondition: false
+		},
+		methods: {
+			disabled: function() {
+				this.dynamicId = this.dynamicId + 1
+			}
+		}
+	})
+</script>
