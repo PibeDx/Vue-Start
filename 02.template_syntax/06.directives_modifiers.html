@@ -1,0 +1,22 @@
+<script src="https://unpkg.com/vue"></script>
+<div id="app">
+	<div>
+	<p>
+		See console
+	</p>
+	</div>
+	<button v-on:click='click' v-on:click.prevent='onSubmit'>click</button>
+</div>
+<script type="text/javascript">
+	var vm = new Vue({
+		el: '#app',
+		methods: {
+			onSubmit: function() {
+				console.log('onSubmit')
+			},
+			click: function() {
+				console.log('click')
+			}
+		}
+	})
+</script>
