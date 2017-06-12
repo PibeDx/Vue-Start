@@ -1,0 +1,22 @@
+<script src="https://unpkg.com/vue"></script>
+<div id="app">
+	<div>
+		<a v-bind:href="url">url</a>
+	</div>
+	<div>
+		<a v-on:click='doSomething'>click</a>
+	</div>
+</div>
+<script type="text/javascript">
+	var vm = new Vue({
+		el: '#app',
+		data: {
+			url: 'http://www.google.com'
+		},
+		methods: {
+			doSomething: function() {
+				console.log('click')
+			}
+		}
+	})
+</script>
